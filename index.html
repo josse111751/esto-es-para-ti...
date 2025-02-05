@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propuesta de San Valentín</title>
+  <style>
+    /* Fondo animado con partículas de corazones */
+    body {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      position: relative;
+      min-height: 100vh;
+    }
+    /* Animación para partículas de corazones */
+    .particle {
+      position: absolute;
+      font-size: 2em;
+      opacity: 0.8;
+      animation: particleMove 10s linear infinite;
+    }
+    @keyframes particleMove {
+      0% { transform: translateY(100vh) translateX(0); opacity: 0.2; }
+      50% { opacity: 1; }
+      100% { transform: translateY(-10vh) translateX(20px); opacity: 0.2; }
+    }
+    /* Contenedor principal para el contenido */
+    .container {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 20px;
+      color: #fff;
+    }
+    .title {
+      font-size: 3em;
+      margin-top: 20vh;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+      animation: fadeIn 2s ease-out;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    /* Estilos para frases de libros */
+    .quote {
+      font-size: 1.5em;
+      margin: 20px;
+      font-style: italic;
+      animation: slideIn 2s ease-out;
+    }
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-30px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    /* Sección con dos personajes entregando un corazón */
+    .characters {
+      margin: 40px 0;
+      font-size: 4em;
+      animation: popIn 1.5s ease-out;
+    }
+    @keyframes popIn {
+      from { transform: scale(0.5); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+    /* Pregunta final */
+    .question {
+      font-size: 2em;
+      margin-top: 40px;
+    }
+    /* Botones de respuesta */
+    .buttons {
+      margin-top: 20px;
+    }
+    .btn {
+      padding: 15px 30px;
+      margin: 10px;
+      font-size: 1.2em;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      text-transform: uppercase;
+    }
+    .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 15px rgba(255,255,255,0.8);
+    }
+    .yes {
+      background-color: #8b00ff;
+      color: #fff;
+    }
+    .no {
+      background-color: #ff4040;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <!-- Partículas de corazones en el fondo -->
+  <div class="particle" style="left: 10%; animation-delay: 0s;">❤️</div>
+  <div class="particle" style="left: 30%; animation-delay: 2s;">❤️</div>
+  <div class="particle" style="left: 50%; animation-delay: 4s;">❤️</div>
+  <div class="particle" style="left: 70%; animation-delay: 6s;">❤️</div>
+  <div class="particle" style="left: 90%; animation-delay: 8s;">❤️</div>
+
+  <!-- Contenedor principal -->
+  <div class="container">
+    <h1 class="title">Feliz  proximo San Valentín</h1>
+    
+    <!-- Frases literarias inspiradoras -->
+    <p class="quote">
+      <strong>"El amor en los tiempos del cólera"</strong> de Gabriel García Márquez:<br>
+      <em>"El amor se hace eterno en cada latido, y en el tuyo descubro mi destino."</em>
+    </p>
+    <p class="quote">
+      <strong>"El alquimista"</strong> de Paulo Coelho:<br>
+      <em>"Cuando deseas algo con todo tu corazón, el universo conspira a tu favor, como yo deseo estar contigo."</em>
+    </p>
+    
+    <!-- Escena de dos personajes entregándose un corazón -->
+    <div class="characters">
+      👦💖👧
+    </div>
+    
+    <!-- Pregunta final y botones -->
+    <div class="question">
+      ¿te gustaria pasar tiempo conmigo este 14 de febrero?
+    </div>
+    <div class="buttons">
+      <button class="btn yes" onclick="alert('Encerio que te hare la chica mas feliz de este mundo.')">Sí</button>
+      <button class="btn no" onclick="alert('Esta bien, lo comprendo..')">No</button>
+    </div>
+  </div>
+</body>
+</html>
